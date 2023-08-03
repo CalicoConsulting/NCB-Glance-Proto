@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <title>API Sample Page</title>
+    </head>
+
+<body>
+
+    <header class="header" id="glance_header">
+        <div class="logo-container">
+            <img src="images/bluewhitelogo.png" alt="">
+            <h1 class="fade-in-out">GLANCE</h1>
+        </div>
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+        <nav>    
+            <a href="index.html">Home</a>        
+            <a href="industry.html">Industry Tracking</a>          
+            <a href="market.html">Market Research</a>
+            <a href="analytics.html">GLANCE Analytics</a>
+            <a href="about.html">FAQ</a>
+            
+        </nav>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="industry.html">Industry Tracking</a></li>
+            <li><a href="market.html">Market Research</a></li>
+            <li><a href="analytics.html">GLANCE Analytics</a></li>
+            <li><a href="about.html">FAQ</a></li>
+          </ul>
+        </header>
+
+        <main class="sample-main">
+
+            <div class="sample-div">
+                <h1>API Sample</h1>
+                <h2>CPI Table</h2>
+                <p>The following code scrapes the CPI data from a table on the STATIN website, and turns it into a csv file.
+                    The results can be seen <span style="color: blue;"><b><a href="industry.html">here.</a></b></span>
+                </p>
+            </div>
+
+            <div class="sample-div">
+                <pre>
+                    <code>
+#import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# URL of the website with the table
+url = "https://www.datazoa.com/data/table.asp?a=view&th=9E947694EC&dzuuid=1833"
+
+# Send a request to fetch the HTML content of the webpage
+response = requests.get(url)
+
+# Parse the HTML content using BeautifulSoup
+soup = BeautifulSoup(response.content, "html.parser")
+
+# Find the <tbody> element that contains the rows of the table
+table_body = soup.find("tbody", class_="dz-frame1")
+
+# Initialize an empty list to store the extracted data
+data = []
+
+# Loop through each row (<tr> element) in the table
+for row in table_body.find_all("tr"):
+    # Initialize an empty list for the row data
+    row_data = []
+
+    # Loop through each cell (<td> or <th> element) in the row
+    for cell in row.find_all(["td", "th"]):
+        # Extract the text from the cell and remove any leading/trailing spaces
+        cell_text = cell.get_text(strip=True)
+        # Append the cell data to the row_data list
+        row_data.append(cell_text)
+
+    # Append the row_data list to the data list
+    data.append(row_data)
+
+# Convert the data list to a pandas DataFrame
+df = pd.DataFrame(data[1:], columns=data[0])
+
+# Save the DataFrame to a CSV file named "extracted_data.csv"
+df.to_csv("STATIN MONTHLY CPI.csv", index=False)
+
+print("Data saved to STATIN MONTHLY CPI.csv")
+                    </code>
+                </pre>
+            </div>
+            
+            <div class="sample-div">
+                <h2>PPI Table</h2>
+                <p>The following code scrapes the PPI data from a table on the STATIN website, and turns it into a csv file.
+                    The results can be seen <span style="color: blue;"><b><a href="industry.html">here.</a></b></span>
+                </p>
+            </div>
+
+
+            <div class="sample-div">
+                <pre>
+                    <code>
+#import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# URL of the website with the table
+url = "https://www.datazoa.com/data/table.asp?a=view&th=9E947694EC&dzuuid=1833"
+
+# Send a request to fetch the HTML content of the webpage
+response = requests.get(url)
+
+# Parse the HTML content using BeautifulSoup
+soup = BeautifulSoup(response.content, "html.parser")
+
+# Find the <tbody> element that contains the rows of the table
+table_body = soup.find("tbody", class_="dz-frame1")
+
+# Initialize an empty list to store the extracted data
+data = []
+
+# Loop through each row (<tr> element) in the table
+for row in table_body.find_all("tr"):
+    # Initialize an empty list for the row data
+    row_data = []
+
+    # Loop through each cell (<td> or <th> element) in the row
+    for cell in row.find_all(["td", "th"]):
+        # Extract the text from the cell and remove any leading/trailing spaces
+        cell_text = cell.get_text(strip=True)
+        # Append the cell data to the row_data list
+        row_data.append(cell_text)
+
+    # Append the row_data list to the data list
+    data.append(row_data)
+
+# Convert the data list to a pandas DataFrame
+df = pd.DataFrame(data[1:], columns=data[0])
+
+# Save the DataFrame to a CSV file named "extracted_data.csv"
+df.to_csv("STATIN MONTHLY CPI.csv", index=False)
+
+print("Data saved to STATIN MONTHLY CPI.csv")
+                    </code>
+                </pre>
+            </div>
+
+        </main>
+
+        <footer>
+            <h3>Calico Consulting 2023</h3>
+        </footer>
+    
+</body>
+</html>

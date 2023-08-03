@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Glance Home Page</title>
+</head>
+<body>
+
+    <header class="header" id="glance_header">
+        <div class="logo-container">
+            <img src="images/bluewhitelogo.png" alt="">
+            <h1 class="fade-in-out">GLANCE</h1>
+        </div>
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+        <nav>    
+            <a href="index.html">Home</a>        
+            <a href="industry.html">Industry Tracking</a>          
+            <a href="market.html">Market Research</a>
+            <a href="analytics.html">GLANCE Analytics</a>
+            <a href="about.html">FAQ</a>
+            
+        </nav>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="industry.html">Industry Tracking</a></li>
+            <li><a href="market.html">Market Research</a></li>
+            <li><a href="analytics.html">GLANCE Analytics</a></li>
+            <li><a href="about.html">FAQ</a></li>
+          </ul>
+        </header>
+    
+
+        <main>
+
+            <div class="industry-div" id="stock-graphs">
+                <h1>Stock Graphs</h1>
+
+                <div class="industry-div" id="stock-graphs-local">
+                    <h1>JSE Perfromance</h1>
+                    <img src="images/JSE.png" alt="" id="jse-img">
+    
+                </div>
+    
+                <div class="industry-div" id="stock-graphs-inter">
+                    <h1>International Stock Performance</h1>
+                    <img src="images/nasdaq.png" alt="" id="nasdaq-img">
+                </div>
+    
+                <div class="industry-div" id="local-indices">
+                    <h1>Local Indices</h1>
+
+                    <div class="industry-div" id="cpi">
+                        <h1>Jamaica Consumer Price Index</h1>
+                        <img src="images/cpi.png" alt="" id="cpi-img">
+        
+                    </div>
+        
+                    <div class="industry-div" id="exports">
+                        <h1>Jamaica Export Rates</h1>
+                        <img src="images/exports.png" alt="" id="exports-img">
+                    </div>
+    
+                </div>
+
+                <div class="industry-div" id="paywall">
+                    <h2>
+                        Want access to other local and international industry stats?
+                        Sign up for <span>NCB Glance</span> today.
+
+                        <br><br>
+
+                        Want these real time industry stats updated as part of your website?
+                        Learn how to gain access to our <a href="analytics.html">Glance Analytics API</a> right now.
+                    </h2>
+
+
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer>
+            <h3>Calico Consulting 2023</h3>
+        </footer>
+
+</body>
+</html>

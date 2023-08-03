@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Market Research Tools Page</title>
+</head>
+<body>
+    <header class="header" id="glance_header">
+        <div class="logo-container">
+            <img src="images/bluewhitelogo.png" alt="">
+            <h1 class="fade-in-out">GLANCE</h1>
+        </div>
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+        <nav>    
+            <a href="index.html">Home</a>        
+            <a href="industry.html">Industry Tracking</a>          
+            <a href="market.html">Market Research</a>
+            <a href="analytics.html">GLANCE Analytics</a>
+            <a href="about.html">FAQ</a>
+            
+        </nav>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="industry.html">Industry Tracking</a></li>
+            <li><a href="market.html">Market Research</a></li>
+            <li><a href="analytics.html">GLANCE Analytics</a></li>
+            <li><a href="about.html">FAQ</a></li>
+          </ul>
+        </header>
+
+        <main>
+            <!-- Popup Container -->
+  <div class="popup-container" id="popup">
+    <div class="popup-content" id="content-1">
+      <!-- Initial popup content -->
+      <h2>Welcome to the NCB Glance resource page!</h2>
+      <br>
+      <p>Lets get to know you and your business</p>
+      <br>
+      <button id="btn-1">Okay!</button>
+    </div>
+
+    <div class="popup-content" id="content-2" style="display: none;">
+      <!-- Content after pressing the "OK" button -->
+      <h2>SME Size</h2>
+      <br>
+      <p>What is the size of your business?</p>
+      <br>
+      <button id="btn-2-1">Micro</button>
+      <button id="btn-2-2">Small</button>
+      <button id="btn-2-3">Medium</button>
+    </div>
+
+    <div class="popup-content" id="content-3" style="display: none;">
+      <!-- Content after pressing one of the buttons in Step 2 -->
+      <h2>Industry</h2>
+      <br>
+      <p>Which industry do you fall into?</p>
+      <br>
+      <button id="btn-3-1">Retailing</button>
+      <button id="btn-3-2">Manufacturing</button>
+      <button id="btn-3-3">Distribution/Service</button>
+      <button id="btn-3-4">Agriculture</button>
+      <button id="btn-3-5">Other</button>
+    </div>
+
+    <div class="popup-content" id="content-4" style="display: none;">
+      <!-- Content after pressing one of the buttons in Step 3 -->
+      <h2>Goal with Glance</h2>
+      <br>
+      <p>What is your primary goal for your business using NCB Glance?</p>
+      <br>
+      <!-- <p>Press one of the buttons below:</p> -->
+      <button id="btn-4-1">Expand</button>
+      <button id="btn-4-2">Start a new Business</button>
+      <button id="btn-4-3">Offer a new product</button>
+    </div>
+
+    <div class="popup-content" id="content-final" style="display: none;">
+      <!-- Final content after pressing one of the buttons in Step 4 -->
+      <h2>Almost there</h2>
+      <br>
+      <p>Based on your answers, here are some resources we recommend using:</p>
+      <b>
+              <p><ul>
+        <li>Resource 1</li>
+        <li>Resource 2</li>
+        <li>Resource 3</li>
+      </ul></p>
+      </b>
+
+      
+      <button id="btn-thank-you">Start using Glance</button>
+    </div>
+  </div>
+
+        <div class="resource-div">
+            <img src="images/const.gif" alt="">
+        </div>
+        
+        </main>
+
+        <footer>
+          <h3>Calico Consulting 2023</h3>
+      </footer>
+</body>
+</html>
