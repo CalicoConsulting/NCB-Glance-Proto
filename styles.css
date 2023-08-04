@@ -377,6 +377,16 @@ nav a:hover::after{
   width: 49%;
 }
 
+#stock-graphs-local h2, #stock-graphs-inter h2{
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+#stock-graphs-local p, #stock-graphs-inter p{
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
 #jse-img{
   height: 50%;
   width: 50%;
