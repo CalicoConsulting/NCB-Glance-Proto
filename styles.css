@@ -404,6 +404,10 @@ nav a:hover::after{
   width: 40%;
 }
 
+#cpi, #exports h3{
+  color: blue;
+}
+
 #cpi-img{
   padding-top: 1em;
   width: 80%;
